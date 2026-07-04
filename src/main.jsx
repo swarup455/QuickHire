@@ -5,6 +5,7 @@ import "./App.css"
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from './components/context/ThemeProvider'
 import { ClerkProvider } from '@clerk/clerk-react'
+import { Toaster } from 'sonner'
 import { dark } from "@clerk/themes";
 import App from './App.jsx'
 
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')).render(
     >
       <ThemeProvider>
         <BrowserRouter>
+          <Toaster richColors />
           <App />
         </BrowserRouter>
       </ThemeProvider>
